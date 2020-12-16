@@ -7,12 +7,11 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bootstrap.js",
   },
-  mode: "development",
+  mode: "production",
   plugins: [
     new CopyPlugin({
       patterns: [
-        { from: "**/*.js", to: "[path][name].[contenthash].js"},
-        { from: "**/*.html", to: "[name].html"},
+        { from: "**/index.html", to: "index.html"},
       ]
     })
   ],
